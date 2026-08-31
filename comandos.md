@@ -70,3 +70,21 @@ CREATE TABLE lojas_produtos(
 
 );
 ```
+
+
+
+
+---
+
+# CRIAÇÃO DE TABELA DE EXEMPLOS PARA OPERAÇÕES ESTRUTURAIS
+
+```sql
+
+CREATE TABLE exemplos(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NULL
+);
+
+```
+
+
