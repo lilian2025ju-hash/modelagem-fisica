@@ -26,12 +26,21 @@ CREATE TABLE produtos(
     descricao TEXT, -- COMO É OPCIONAL , COLOCAMOS NULL OU OMITIMOS
     preco DECIMAL(10, 2) NOT NULL,
     quantidade INT NOT NULL,
-    fornecedor_id INT NOT NULL
+    fornecedor_id INT NOT NULL,
     
     -- configurando a chave estrangeira fornecedor_id
     -- que se conecta (referencia) a chave primária id na tabela fornecedores
     FOREIGN KEY (fornecedor_id) REFERENCES fornecedores(id)
 
+
+);
+```
+## Criação de tabela fornecedor
+
+```sql
+CREATE TABLE lojas(
+    id INT  PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL
 
 );
 ```
