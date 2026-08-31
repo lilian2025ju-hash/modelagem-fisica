@@ -82,9 +82,8 @@ CREATE TABLE lojas_produtos(
 
 CREATE TABLE exemplos(
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NULL
+    nome VARCHAR(100) NULL,
 );
-
 ```
 
 ## Usando ALTER TABLE para a alterações estruturais
@@ -95,7 +94,14 @@ CREATE TABLE exemplos(
 ALTER TABLE exemplos RENAME TO Clientes;
 
 ```
- ## RENOMEANDO A COLUNA
+### Renomeando a coluna
+
 ```sql
-ALTER TABLE Clientes CHANCE COLUMN nome nome_completo VARCHAR(100) NOT NULL;
+ALTER TABLE clientes CHANGE COLUMN nome nome_completo VARCHAR(100) NOT NULL;
+```
+
+### Adicionando coluna e definindo um valor padrão (default)
+
+```sql
+ALTER TABLE clientes ADD COLUMN idade INT NOT NULL DEFAULT 0;
 ```
