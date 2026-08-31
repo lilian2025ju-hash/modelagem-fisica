@@ -87,4 +87,15 @@ CREATE TABLE exemplos(
 
 ```
 
+## Usando ALTER TABLE para a alterações estruturais
 
+## Renomeando a tabela
+
+```sql
+ALTER TABLE exemplos RENAME TO Clientes;
+
+```
+ ## RENOMEANDO A COLUNA
+```sql
+ALTER TABLE Clientes CHANCE COLUMN nome nome_completo VARCHAR(100) NOT NULL;
+```
